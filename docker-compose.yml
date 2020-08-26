@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  git_for_windows_issue_2778:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+#      - git_for_windows_issue_2778_volume:c:/data
+      - ./data:c:/data
+#volumes:
+#  git_for_windows_issue_2778_volume:
+#    external: true
